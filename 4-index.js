@@ -4,8 +4,12 @@
 // ==============================================
 
 const express = require('express');
+const bodyParser = require('body-parser');
 const app     = express();
 const port    =   process.env.PORT || 1122;
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 // RUTAS
 // ==============================================
@@ -22,6 +26,11 @@ app.get('/list', function(req, res) {
     });  
 });
 
+app.post('/list', function(req, res) {
+    console.log(req.body);
+    (req.body.user == 'Ninja') ? res.status(200).send(req.body) : res.status(500).send('Usuario Incorrecto');
+});
+
 // INICIAR SERVER
 // ==============================================
 app.listen(port);
@@ -31,6 +40,14 @@ console.log(`http://localhost:${port}`);
 
 /* 
 
-1) Mostrar resultado en POSTMAN
+1) Mostrar body-parser 
+2) Mostrar diferentes tipos de respuestas para POSTMAN
 
+POSTMAN
+    Header  Content-Type: application/json
+    
+    Body: {
+        "user":"Ninja",
+        "psw": "Ninja201"
+    }
 */
