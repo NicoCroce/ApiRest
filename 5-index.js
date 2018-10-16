@@ -44,7 +44,7 @@ console.log(`http://localhost:${port}`);
 
 /* 
 
-1) Mostrar body-parser 
+1) Mostrar Router
 2) Mostrar diferentes tipos de respuestas para POSTMAN
 
 POSTMAN
