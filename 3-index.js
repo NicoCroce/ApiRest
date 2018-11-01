@@ -18,7 +18,7 @@ app.get('/list', function(req, res) {
     res.send({
         taller: 'Api REST',
         participantes: 10,
-        words: ['nodejs', 'js', 'express', 'server'] 
+        referencias: ['nodejs', 'js', 'express', 'server'] 
     });  
 });
 

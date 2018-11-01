@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 //Middleware.
 app.use(function(req, res, next) {
     // muestra cada request en consola.
-    console.log(req.method, req.url);
+    //console.log(req.method, req.url);
     // Continúa con la ejecución.
     next(); 
 });
@@ -28,7 +28,7 @@ const router = express.Router();
 let response = {
     taller: 'Api REST',
     participantes: '10',
-    words: ['nodejs', 'js', 'express', 'server'] 
+    referencias: ['nodejs', 'js', 'express', 'server'] 
 }
 
 
@@ -38,9 +38,10 @@ app.get('/', function(req, res) {
 
 //Como queryString.
 app.route('/list')
+    //http://localhost:1122/list?key=taller
     .get(function(req, res) {
-        if(req.query.word) {
-            res.status(200).send(response[req.query.word]);
+        if(req.query.key) {
+            res.status(200).send(response[req.query.key]);
         } else {
             res.send(response);  
         }
@@ -52,6 +53,7 @@ app.route('/list')
 
 
 //Como path de la URL.
+//http://localhost:1122/list/taller
 app.get('/list/:word', (req, res) => {
     res.status(200).send(response[req.params.word]);
 });
@@ -69,9 +71,9 @@ console.log(`http://localhost:${port}`);
 2) Mostrar params en path.
 
 POSTMAN PATH
-    http://localhost:1122/list/words
+    http://localhost:1122/list/referencias
 
 POSTMAN QUERY
-    http://localhost:1122/list?word="words"
+    http://localhost:1122/list?key="referencias"
     
 */
