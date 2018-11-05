@@ -49,6 +49,22 @@ app.route('/list')
     .post(function(req, res) {
         (req.body.user == 'Ninja') ? res.status(200).send(req.body) : res.status(500).send('Usuario Incorrecto');
     })
+    .put(function(req, res){
+        if(req.body.id) {
+            response[req.body.id] = req.body.data;
+            res.status(200).send(response);
+        } else {
+            res.status(500).send('ID No definido');
+        }
+    })
+    .patch(function(req, res){
+        if(req.body.id) {
+            response[req.body.id] = req.body.data;
+            res.status(200).send(response);
+        } else {
+            res.status(500).send('ID No definido');
+        }
+    })
     //http://localhost:1122/list?referencias=1
     .delete(function(req, res){
         if(req.query.id) {
@@ -82,10 +98,27 @@ console.log('Magic happens on port ' + port);
 console.log(`http://localhost:${port}`);
 
 
+/* 
 
-//2) Mostrar DELETE.
-//POSTMAN PATH
-//http://localhost:1122/list?referencias=1
-//http://localhost:1122/list/1
+1) Mostrar PUT
 
-//POSTMAN BODY
+POSTMAN PATH
+    http://localhost:1122/list
+
+POSTMAN BODY
+    {
+        "id":"taller",
+        "data": "Taller Ninja Api Restfull"
+    }     
+
+2) Mostrar PATCH
+
+POSTMAN PATH
+    http://localhost:1122/list
+
+POSTMAN BODY
+    {
+        "id":"taller",
+        "data": "Taller Ninja Api Restfull"
+    }     
+*/
