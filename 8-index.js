@@ -66,6 +66,7 @@ app.get('/list/:word', (req, res) => {
     res.status(200).send(response[req.params.word]);
 });
 
+//http://localhost:1122/list/1
 app.delete('/list/:id', (req, res) => {
     if(req.params.id) {
         response.referencias.splice(req.params.id, 1);
@@ -89,3 +90,7 @@ console.log(`http://localhost:${port}`);
 //http://localhost:1122/list/1
 
 //POSTMAN BODY
+/* 
+    http://localhost:1122/list/1
+    http://localhost:1122/list/id=1 
+ */
