@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-const router = express.Router();
+express.Router();
 
 
 // RUTAS
@@ -32,7 +32,7 @@ app.route('/list')
     })
     .post(function(req, res) {
         console.log(req.body);
-        (req.body.user == 'Ninja') ? res.status(200).send(req.body) : res.status(500).send('Usuario Incorrecto');
+        (req.body.user == 'Ninja') ? res.status(200).send(req.body) : res.status(401).send('Usuario Incorrecto');
     });
 
 // INICIAR SERVER

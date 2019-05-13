@@ -15,11 +15,12 @@ app.use(bodyParser.json());
 app.use(function(req, res, next) {
     // muestra cada request en consola.
     console.log(req.method, req.url);
+    res.set('time-stamp', Date.now())
     // Continúa con la ejecución.
     next(); 
 });
 
-const router = express.Router();
+express.Router();
 
 
 // RUTAS

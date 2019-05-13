@@ -11,7 +11,7 @@ const port    =   process.env.PORT || 1122;
 // ==============================================
 
 app.get('/', function(req, res) {
-    res.send('Prueba de API');  
+    res.send('<h1 style="text-align: center; margin-top: 40px;">Esta es una prueba enviando HTML  👩‍💻 👨‍💻</h1>');  
 });
 
 // INICIAR SERVER

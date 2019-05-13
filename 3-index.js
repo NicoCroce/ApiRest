@@ -30,7 +30,6 @@ console.log(`http://localhost:${port}`);
 
 
 /* 
-
-1) Mostrar resultado en POSTMAN
-
+1) Mostrar el resultado en el navegador.
+2) Mostrar resultado en POSTMAN
 */

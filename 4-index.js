@@ -5,6 +5,7 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
+//body-parser extract the entire body portion of an incoming request stream and exposes it on req.body
 const app     = express();
 const port    =   process.env.PORT || 1122;
 
@@ -22,12 +23,11 @@ app.get('/list', function(req, res) {
     res.send({
         taller: 'Api REST',
         participantes: 10,
-        referencias: ['nodejs', 'js', 'express', 'server'] 
-    });  
+        referencias: ['nodejs', 'js', 'express', 'server']
+    });
 });
 
 app.post('/list', function(req, res) {
-    console.log(req.body);
     (req.body.user == 'Ninja') ? res.status(200).send(req.body) : res.status(500).send('Usuario Incorrecto');
 });
 
@@ -42,6 +42,11 @@ console.log(`http://localhost:${port}`);
 
 1) Mostrar body-parser 
 2) Mostrar diferentes tipos de respuestas para POSTMAN
+3) Agregar un header en /list   res.set('HEADER', 'Taller');
+4) Obtener HEADER
+        console.log(`BODY: ${req.body}`);
+        console.log(`HEADERS: ${JSON.stringify(req.headers)}`);
+        console.log(`Postman-Token: ${req.header('Postman-Token')}`);
 
 POSTMAN
     Header  Content-Type: application/json

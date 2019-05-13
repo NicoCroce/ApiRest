@@ -19,17 +19,16 @@ app.use(function(req, res, next) {
     next(); 
 });
 
-const router = express.Router();
-
-
-// RUTAS
-// ==============================================
+express.Router();
 
 let response = {
     taller: 'Api REST',
     participantes: '10',
     referencias: ['nodejs', 'js', 'express', 'server'] 
 }
+
+// RUTAS
+// ==============================================
 
 
 app.get('/', function(req, res) {
@@ -75,5 +74,15 @@ POSTMAN PATH
 
 POSTMAN QUERY
     http://localhost:1122/list?key="referencias"
+
+
+    Como práctica recomendada, casi todos los desarrolladores recomiendan hacerlo de la siguiente manera. Si desea identificar un recurso, debe usar la variable de ruta. Pero si desea ordenar o filtrar elementos, entonces debe usar el parámetro de consulta. Así, por ejemplo, puedes definir así:
+
+    /users # Fetch a list of users
+    /users?occupation=programer # Fetch a list of programer user
+    /users/123 # Fetch a user who has id 123
     
 */
+
+
+

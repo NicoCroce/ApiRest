@@ -19,7 +19,7 @@ app.use(function(req, res, next) {
     next(); 
 });
 
-const router = express.Router();
+express.Router();
 
 
 // RUTAS
@@ -89,8 +89,3 @@ console.log(`http://localhost:${port}`);
 //http://localhost:1122/list?referencias=1
 //http://localhost:1122/list/1
 
-//POSTMAN BODY
-/* 
-    http://localhost:1122/list/1
-    http://localhost:1122/list/id=1 
- */
