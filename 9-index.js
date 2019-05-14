@@ -19,7 +19,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-const router = express.Router();
+express.Router();
 
 
 // RUTAS

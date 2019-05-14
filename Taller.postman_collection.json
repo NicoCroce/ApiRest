@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "4bdf8982-2867-45d5-ba5a-81a45183d870",
+		"name": "Taller",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1122/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1122",
+					"path": [
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post List",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": \"Ninja\",\n    \"psw\": \"Ninja201\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1122/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1122",
+					"path": [
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get List Words Path",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1122/list/participantes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1122",
+					"path": [
+						"list",
+						"participantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Query",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1122/list?key=taller",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1122",
+					"path": [
+						"list"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "taller"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Referencia query",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1122/list?id=js",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1122",
+					"path": [
+						"list"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "js"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Referencia Path",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1122/list/nodejs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1122",
+					"path": [
+						"list",
+						"nodejs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT nuevo usuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nombre\": \"Pablo R.\",\n\t\"area\": \"Fnet\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1122/list/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1122",
+					"path": [
+						"list",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch editar solo atributos del usuario",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"prop\": \"area\",\n\t\"value\": \"GLOMO - TL Front\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1122/list/users?id=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1122",
+					"path": [
+						"list",
+						"users"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put editar usuario",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"Nicolás Croce Sternari\",\n    \"area\": \"GLOMO / Fnet\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1122/list/users?id=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1122",
+					"path": [
+						"list",
+						"users"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

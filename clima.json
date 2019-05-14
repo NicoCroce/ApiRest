@@ -1,0 +1,77 @@
+{
+  "fecha" : "13/09/17",
+  "hora" : "6:58",
+  "humedad" : {
+    "actual" : "90 %",
+    "anual" : {
+      "max" : "98 %",
+      "min" : "25 %"
+    },
+    "diaria" : {
+      "max" : "92 %",
+      "min" : "75 %"
+    },
+    "hora" : {
+      "max" : "4:52",
+      "min" : "0:04"
+    },
+    "mensual" : {
+      "max" : "96 %",
+      "min" : "37 %"
+    }
+  },
+  "lluvia" : {
+    "anual" : "823.0 mm",
+    "diaria" : "0.0 mm",
+    "intensidad" : "0.0 mm/h",
+    "mensual" : "33.8 mm"
+  },
+  "presion" : {
+    "actual" : "1013.3 hPa"
+  },
+  "rocio" : {
+    "actual" : "7.3 °C"
+  },
+  "temperatura" : {
+    "actual" : "8.8 °C",
+    "anual" : {
+      "max" : "34.4 °C",
+      "min" : "-3.5 °C"
+    },
+    "diaria" : {
+      "max" : "12.2 °C",
+      "min" : "8.7 °C"
+    },
+    "hora" : {
+      "max" : "0:00",
+      "min" : "4:27"
+    },
+    "mensual" : {
+      "max" : "28.7 °C",
+      "min" : "5.3 °C"
+    }
+  },
+  "temperaturaHumedad" : {
+    "actual" : "8.9 °C"
+  },
+  "temperaturaViento" : {
+    "actual" : "8.8 °C"
+  },
+  "ts" : "Wed Sep 13 2017 06:55:24 GMT-0300 (ART)",
+  "viento" : {
+    "anual" : {
+      "max" : "56.3 km/h"
+    },
+    "delSector" : "S (182)",
+    "diaria" : {
+      "max" : "0.0 km/h"
+    },
+    "hora" : {
+      "max" : "----"
+    },
+    "mensual" : {
+      "max" : "45.1 km/h"
+    },
+    "velocidad" : "0.0 km/h"
+  }
+}
