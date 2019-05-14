@@ -15,15 +15,12 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:1122/list",
+					"raw": "http://localhost:1122",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "1122",
-					"path": [
-						"list"
-					]
+					"port": "1122"
 				}
 			},
 			"response": []
@@ -40,7 +37,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"user\": \"Ninja\",\n    \"psw\": \"Ninja201\"\n}"
+					"raw": "{\n    \"user\": \"Ninj1a\",\n    \"psw\": \"Ninja2017\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:1122/list",
@@ -119,7 +116,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:1122/list?id=js",
+					"raw": "http://localhost:1122/list?id=2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -131,7 +128,7 @@
 					"query": [
 						{
 							"key": "id",
-							"value": "js"
+							"value": "2"
 						}
 					]
 				}
@@ -148,7 +145,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:1122/list/nodejs",
+					"raw": "http://localhost:1122/list/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -156,14 +153,14 @@
 					"port": "1122",
 					"path": [
 						"list",
-						"nodejs"
+						"1"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "PUT nuevo usuario",
+			"name": "Post nuevo usuario",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -247,7 +244,7 @@
 					"raw": "{\n    \"nombre\": \"Nicolás Croce Sternari\",\n    \"area\": \"GLOMO / Fnet\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:1122/list/users?id=0",
+					"raw": "http://localhost:1122/list/users?id=5",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -260,7 +257,7 @@
 					"query": [
 						{
 							"key": "id",
-							"value": "0"
+							"value": "5"
 						}
 					]
 				}

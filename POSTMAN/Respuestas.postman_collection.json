@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "aa3a8ffd-949a-4ff0-a57d-dc425ffcf19d",
+		"name": "Respuestas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Todos los datos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				},
+				"description": "1) Leventar el server y obtener todos los datos del json."
+			},
+			"response": []
+		},
+		{
+			"name": "Humedad",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				},
+				"description": "2) Obtener todos los datos de humedad dentro de /humedad."
+			},
+			"response": []
+		},
+		{
+			"name": "Humedad Quincenal",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"max\": \"90%\",\n\t\"min\": \"30%\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1122/humedad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1122",
+					"path": [
+						"humedad"
+					]
+				},
+				"description": "3) Agregar Humedad quincenal con atributos max: 90% y min: 30% dentro de /humedad."
+			},
+			"response": []
+		},
+		{
+			"name": "Humedad Eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"max\": \"90%\",\n\t\"min\": \"30%\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1122/humedad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1122",
+					"path": [
+						"humedad"
+					]
+				},
+				"description": "4) Eliminar temperatura anual  dentro de /humedad."
+			},
+			"response": []
+		},
+		{
+			"name": "Patch viento",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"max\": \"50.9 km/h\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1122/viento",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1122",
+					"path": [
+						"viento"
+					]
+				},
+				"description": "4) Modificar viento anual max = \"50.9 km/h\"  dentro de /viento."
+			},
+			"response": []
+		},
+		{
+			"name": "Datos del Viento",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"max\": \"50.9 km/h\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1122/viento?propiedad=\"anual\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1122",
+					"path": [
+						"viento"
+					],
+					"query": [
+						{
+							"key": "propiedad",
+							"value": "\"anual\""
+						}
+					]
+				},
+				"description": "5) Obtener datos del viento dependiendo del parámetro que se envía. \"anual\", \"delSector\", \"diaria\", \"hora\", \"mensual\", \"velocidad\" desde /viento."
+			},
+			"response": []
+		}
+	]
+}

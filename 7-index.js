@@ -57,6 +57,10 @@ app.get('/list/:word', (req, res) => {
     res.status(200).send(response[req.params.word]);
 });
 
+app.get('/list/word', (req, res) => {
+    res.status(200).send(response[req.params.word]);
+});
+
 // INICIAR SERVER
 // ==============================================
 app.listen(port);

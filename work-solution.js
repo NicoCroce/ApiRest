@@ -18,11 +18,37 @@ express.Router();
 // RUTAS
 // ==============================================
 
+app.get('/', (req, res) => {
+    res.status(200).send(dataClima);
+});
+
+app.route('/humedad')
+    .get((req, res) => {
+        res.status(200).send(dataClima['humedad'])
+    })
+    .post((req, res) => {
+        dataClima['humedad']['quincenal'] = req.body;
+        res.status(200).send({ status: 200, text: 'Se agregó', payload: dataClima['humedad']['quincenal'] })
+    })
+    .delete((req, res) => {
+        delete dataClima.humedad.anual;
+        res.status(200).send({ status: 200, text: 'Se eliminó', payload: dataClima['humedad'] });
+    });
+
+app.route('/viento')
+    .patch((req, res) => {
+        Object.assign(dataClima.viento.anual, req.body); 
+        res.status(200).send( { status: 200, text: 'Se modificó max', payload: dataClima.viento });
+    })
+    .get((req, res) => {
+        res.status(200).send( { status: 200, text: 'Obtiene ' + req.query.propiedad, payload: dataClima.viento[req.query.propiedad] });
+    })
+
 
 
 // INICIAR SERVER
 // ==============================================
-
+app.listen(port);
 console.log('Magic happens on port ' + port);
 console.log(`http://localhost:${port}`);
 
